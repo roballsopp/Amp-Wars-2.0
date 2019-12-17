@@ -1,0 +1,45 @@
+{
+  "name": "ampwars2.0",
+  "version": "1.0.0",
+  "main": "/src/index.js",
+  "author": "rallsopp0@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.js\"",
+    "lint-fix": "eslint \"{./**/*.js,}\" --fix",
+    "build": "webpack",
+    "build-demo": "webpack --config webpack.demo.js",
+    "start": "webpack-dev-server --config webpack.dev.js"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.8.0",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/styles": "^4.7.1",
+    "@sentry/browser": "^5.10.2",
+    "core-js": "^3.5.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-text-mask": "^5.4.3",
+    "regenerator-runtime": "^0.13.3",
+    "simple-icons": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.19.1",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
