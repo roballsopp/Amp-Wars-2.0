@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import MuiThemeProvider from '@material-ui/styles/ThemeProvider';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import * as Sentry from '@sentry/browser';
-import theme from './mui-theme';
-import Router from './Router';
-import ErrorBoundary from './common/ErrorBoundary';
-import { ToastProvider } from './common/ToastProvider';
-import { SentryDSN } from './config';
+import theme from '../mui-theme';
+import Router from './SecureAppRouter';
+import { TokenProvider } from './TokenProvider';
+import ErrorBoundary from '../common/ErrorBoundary';
+import { ToastProvider } from '../common/ToastProvider';
+import { SentryDSN } from '../config';
 
 function AppWrapper() {
 	return (
@@ -15,7 +16,9 @@ function AppWrapper() {
 			<CssBaseline />
 			<ErrorBoundary>
 				<ToastProvider>
-					<Router />
+					<TokenProvider>
+						<Router />
+					</TokenProvider>
 				</ToastProvider>
 			</ErrorBoundary>
 		</MuiThemeProvider>
